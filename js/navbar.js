@@ -11,7 +11,7 @@ navbar_element.innerHTML = `
             <div class="navbar-header">
                 <a class="navbar-brand fw-bold crowdin-ignore" href="/">
                     <img src="assets/images/logo-56x56.png" alt=""
-                         class="crowdin-ignore"> LizardByte
+                         class="crowdin-ignore"> Shelbeely
                 </a>
             </div>
             <div class="navbar-header">

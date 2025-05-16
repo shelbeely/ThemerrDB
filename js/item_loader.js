@@ -1,4 +1,4 @@
-let org_name = "LizardByte"
+let org_name = "Shelbeely"
 let base_url = `https://shelbeely.github.io/ThemerrDB/`
 // let themerr_database = "database" // Removed unnecessary database path
 // for local testing in a JetBrains IDE
