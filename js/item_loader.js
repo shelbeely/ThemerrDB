@@ -1,5 +1,5 @@
 let org_name = "LizardByte"
-let base_url = `http://locahost:8000/`
+let base_url = `https://shelbeely.github.io/ThemerrDB/`
 let themerr_database = "database"
 // for local testing in a JetBrains IDE
 // base_url = `http://localhost:63342/ThemerrDB/`
