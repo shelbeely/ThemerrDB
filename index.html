@@ -2,7 +2,7 @@
     <head>
         <title>Shelbeely - ThemerrDB</title>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="Video game and movie theme song database." />
         <meta name="author" content="" />
 
@@ -25,147 +25,121 @@
         <link rel="icon" type="image/x-icon" href="favicon.ico" />
         <!-- FontAwesome CDN -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-        <!-- Material Design 3 -->
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-        <link href="https://unpkg.com/material-components-web@14.0.0/dist/material-components-web.min.css" rel="stylesheet" />
-        <!-- Custom css -->
+        <!-- Bootstrap theme-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <!-- Custom css-->
         <link href="css/custom.css" rel="stylesheet" />
 
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     </head>
-    <body class="mdc-typography mdc-typography--body1 mdc-theme--dark">
-        <main class="mdc-top-app-bar--fixed-adjust">
-            <!-- Navigation -->
+    <body class="d-flex flex-column h-100 bg-dark-gray">
+        <main class="flex-shrink-0 overflow-hidden">
+            <!-- Navigation-->
             <nav id="nav-container"></nav>
 
-            <div class="mdc-layout-grid">
-                <div class="mdc-layout-grid__inner">
-                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-                        <div id="themerr-container" style="min-width: 335px">
-                            <!-- Search section -->
-                            <section class="mdc-top-app-bar--short my-5" id="Search">
-                                <div class="mdc-layout-grid mdc-layout-grid--inner">
-                                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-                                        <form id="searchForm">
-                                            <div class="mdc-layout-grid mdc-layout-grid--inner">
-                                                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 mdc-layout-grid__cell--span-3-tablet mdc-layout-grid__cell--span-3-desktop">
-                                                    <div class="mdc-select mdc-select--outlined mdc-select--filled" data-mdc-auto-init="MDCSelect">
-                                                        <input type="hidden" id="search_type">
-                                                        <div class="mdc-select__anchor">
-                                                            <i class="mdc-select__dropdown-icon"></i>
-                                                            <span class="mdc-floating-label">Search Type</span>
-                                                            <div class="mdc-notched-outline">
-                                                                <div class="mdc-notched-outline__leading"></div>
-                                                                <div class="mdc-notched-outline__notch">
-                                                                    <span class="mdc-floating-label">Search Type</span>
-                                                                </div>
-                                                                <div class="mdc-notched-outline__trailing"></div>
-                                                            </div>
-                                                            <span class="mdc-select__selected-text"></span>
-                                                        </div>
-                                                        <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu--fullwidth">
-                                                            <ul class="mdc-list">
-                                                                <li class="mdc-list-item mdc-list-item--selected" data-value="0" aria-selected="true">Games</li>
-                                                                <li class="mdc-list-item" data-value="1">Game Collections</li>
-                                                                <li class="mdc-list-item" data-value="2">Game Franchises</li>
-                                                                <li class="mdc-list-item" data-value="3">Movies</li>
-                                                                <li class="mdc-list-item" data-value="4">Movie Collections</li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-6-desktop">
-                                                    <div class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon">
-                                                        <i class="material-icons mdc-text-field__icon mdc-text-field__icon--leading" aria-hidden="true">search</i>
-                                                        <input type="text" id="search_term" class="mdc-text-field__input">
-                                                        <div class="mdc-notched-outline">
-                                                            <div class="mdc-notched-outline__leading"></div>
-                                                            <div class="mdc-notched-outline__notch">
-                                                                <span class="mdc-floating-label">Search</span>
-                                                            </div>
-                                                            <div class="mdc-notched-outline__trailing"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 mdc-layout-grid__cell--span-3-tablet mdc-layout-grid__cell--span-3-desktop">
-                                                    <button class="mdc-button mdc-button--raised mdc-button--unelevated" onclick="run_search()">
-                                                        <span class="mdc-button__label">Search</span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" id="search-container"></div>
-                                </div>
-                            </section>
+            <div class="container px-auto my-5">
+                <div class="col-lg-12 mx-auto" id="themerr-container" style="min-width: 335px">
 
-                            <!-- Content sections -->
-                            <section class="mdc-top-app-bar--short my-5" id="Games">
-                                <div class="mdc-layout-grid mdc-layout-grid--inner">
-                                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-                                        <div class="mdc-card text-white">
-                                            <h2 class="mdc-typography--headline6 text-white">Games</h2>
-                                        </div>
+                    <!-- Search section-->
+                    <section class="py-5 offset-anchor" id="Search">
+                        <div class="container mb-5">
+                            <form id="searchForm">
+                                <div class="form-group d-flex">
+                                    <div class="col-3 me-3">
+                                        <select class="form-select rounded-0" aria-label="Search Type" id="search_type">
+                                            <option value="0">Games</option>
+                                            <option value="1">Game Collections</option>
+                                            <option value="2">Game Franchises</option>
+                                            <option selected value="3">Movies</option>
+                                            <option value="4">Movie Collections</option>
+                                        </select>
                                     </div>
-                                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" id="games-container"></div>
-                                </div>
-                            </section>
-
-                            <section class="mdc-top-app-bar--short my-5" id="Game Collections">
-                                <div class="mdc-layout-grid mdc-layout-grid--inner">
-                                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-                                        <div class="mdc-card text-white">
-                                            <h2 class="mdc-typography--headline6 text-white">Game Collections</h2>
-                                        </div>
+                                    <div class="col-6 me-3">
+                                        <input type="text" class="form-control rounded-0" placeholder="Search" id="search_term">
                                     </div>
-                                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" id="game-collections-container"></div>
+                                    <button type="button" class="btn btn-warning ml-3 rounded-0" onclick="run_search()">
+                                        <i class="fa-fw fas fa-search"></i>Search</button>
                                 </div>
-                            </section>
-
-                            <section class="mdc-top-app-bar--short my-5" id="Game Franchises">
-                                <div class="mdc-layout-grid mdc-layout-grid--inner">
-                                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-                                        <div class="mdc-card text-white">
-                                            <h2 class="mdc-typography--headline6 text-white">Game Franchises</h2>
-                                        </div>
-                                    </div>
-                                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" id="game-franchises-container"></div>
-                                </div>
-                            </section>
-
-                            <section class="mdc-top-app-bar--short my-5" id="Movies">
-                                <div class="mdc-layout-grid mdc-layout-grid--inner">
-                                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-                                        <div class="mdc-card text-white">
-                                            <h2 class="mdc-typography--headline6 text-white">Movies</h2>
-                                        </div>
-                                    </div>
-                                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" id="movies-container"></div>
-                                </div>
-                            </section>
-
-                            <section class="mdc-top-app-bar--short my-5" id="Movie Collections">
-                                <div class="mdc-layout-grid mdc-layout-grid--inner">
-                                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-                                        <div class="mdc-card text-white">
-                                            <h2 class="mdc-typography--headline6 text-white">Movie Collections</h2>
-                                        </div>
-                                    </div>
-                                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" id="movie-collections-container"></div>
-                                </div>
-                            </section>
+                            </form>
                         </div>
-                    </div>
+                        <div id="search-container"></div>
+                    </section>
+
+                    <!-- Games section-->
+                    <section class="py-5 offset-anchor" id="Games">
+                        <div class="row gx-5 justify-content-center">
+                            <div class="col-lg-8 col-xl-6">
+                                <div class="text-center text-white">
+                                    <h2 class="fw-bolder">Games</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="games-container"></div>
+                    </section>
+
+                    <!-- Game Collections section-->
+                    <section class="py-5 offset-anchor" id="Game Collections">
+                        <div class="row gx-5 justify-content-center">
+                            <div class="col-lg-8 col-xl-6">
+                                <div class="text-center text-white">
+                                    <h2 class="fw-bolder">Game Collections</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="game-collections-container"></div>
+                    </section>
+
+                    <!-- Game Franchises section-->
+                    <section class="py-5 offset-anchor" id="Game Franchises">
+                        <div class="row gx-5 justify-content-center">
+                            <div class="col-lg-8 col-xl-6">
+                                <div class="text-center text-white">
+                                    <h2 class="fw-bolder">Game Franchises</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="game-franchises-container"></div>
+                    </section>
+
+                    <!-- Movies section-->
+                    <section class="py-5 offset-anchor" id="Movies">
+                        <div class="row gx-5 justify-content-center">
+                            <div class="col-lg-8 col-xl-6">
+                                <div class="text-center text-white">
+                                    <h2 class="fw-bolder">Movies</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="movies-container"></div>
+                    </section>
+
+                    <!-- Movie Collections section-->
+                    <section class="py-5 offset-anchor" id="Movie Collections">
+                        <div class="row gx-5 justify-content-center">
+                            <div class="col-lg-8 col-xl-6">
+                                <div class="text-center text-white">
+                                    <h2 class="fw-bolder">Movie Collections</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="movie-collections-container"></div>
+                    </section>
+
                 </div>
             </div>
-        </main>
-        <!-- Footer -->
-        <footer class="mdc-top-app-bar--short mdc-top-app-bar--fixed mdc-top-app-bar--fixed-adjust" id="footer-container"></footer>
 
-        <!-- Material Design JS -->
-        <script src="https://unpkg.com/material-components-web@14.0.0/dist/material-components-web.min.js"></script>
-        <script>window.mdc.autoInit()</script>
+            <!-- Donate section-->
+
+        </main>
+        <!-- Footer-->
+        <footer class="bg-dark py-4 mt-auto" id="footer-container"></footer>
+
+        <!-- Audio player bottom navbar -->
+        <!-- <nav id="player-navbar"></nav> -->
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
         <!-- Get navbar -->
         <script src="js/navbar.js"></script>
