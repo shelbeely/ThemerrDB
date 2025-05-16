@@ -1,6 +1,6 @@
 let org_name = "LizardByte"
 let base_url = `https://shelbeely.github.io/ThemerrDB/`
-let themerr_database = "database"
+// let themerr_database = "database" // Removed unnecessary database path
 // for local testing in a JetBrains IDE
 // base_url = `http://localhost:63342/ThemerrDB/`
 // themerr_database = "database"
@@ -22,35 +22,35 @@ $(document).ready(function(){
 // create item cards
 let types_dict = {
     "games": {
-        "base_url": `${base_url}/${themerr_database}/games/`,
+        "base_url": `${base_url}/games/`,
         "container": document.getElementById("games-container"),
         "database": "igdb",
         "database-logo": "https://pbs.twimg.com/profile_images/1186326995254288385/_LV6aKaA_400x400.jpg",
         "all_search_items": [],
     },
     "game_collections": {
-        "base_url": `${base_url}/${themerr_database}/game_collections/`,
+        "base_url": `${base_url}/game_collections/`,
         "container": document.getElementById("game-collections-container"),
         "database": "igdb",
         "database-logo": "https://pbs.twimg.com/profile_images/1186326995254288385/_LV6aKaA_400x400.jpg",
         "all_search_items": [],
     },
     "game_franchises": {
-        "base_url": `${base_url}/${themerr_database}/game_franchises/`,
+        "base_url": `${base_url}/game_franchises/`,
         "container": document.getElementById("game-franchises-container"),
         "database": "igdb",
         "database-logo": "https://pbs.twimg.com/profile_images/1186326995254288385/_LV6aKaA_400x400.jpg",
         "all_search_items": [],
     },
     "movies": {
-        "base_url": `${base_url}/${themerr_database}/movies/`,
+        "base_url": `${base_url}/movies/`,
         "container": document.getElementById("movies-container"),
         "database": "themoviedb",
         "database-logo": "https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg",
         "all_search_items": [],
     },
     "movie_collections": {
-        "base_url": `${base_url}/${themerr_database}/movie_collections/`,
+        "base_url": `${base_url}/movie_collections/`,
         "container": document.getElementById("movie-collections-container"),
         "database": "themoviedb",
         "database-logo": "https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg",
@@ -160,28 +160,28 @@ let populate_results = function (type, result, item_type_container) {
                     title = themerr_data['name']
                     summary = themerr_data['summary']
                     database_link_src = themerr_data['url']
-                    edit_link = `https://github.com/${org_name}/${themerr_database}/issues/new?assignees=&labels=request-theme&template=theme.yml&title=${encodeURIComponent('[GAME]: ')}${encodeURIComponent(title)}&databause_url=${encodeURIComponent(database_link_src)}`
+                    edit_link = `https://github.com/${org_name}/ThemerrDB/issues/new?assignees=&labels=request-theme&template=theme.yml&title=${encodeURIComponent('[GAME]: ')}${encodeURIComponent(title)}&databause_url=${encodeURIComponent(database_link_src)}`
                 } else if (type === "game_collections" || type === "game_franchises") {
                     year = null
                     poster_src = null
                     title = themerr_data['name']
                     summary = null
                     database_link_src = themerr_data['url']
-                    edit_link = `https://github.com/${org_name}/${themerr_database}/issues/new?assignees=&labels=request-theme&template=theme.yml&title=${encodeURIComponent('[GAME COLLECTION]: ')}${encodeURIComponent(title)}&databause_url=${encodeURIComponent(database_link_src)}`
+                    edit_link = `https://github.com/${org_name}/ThemerrDB/issues/new?assignees=&labels=request-theme&template=theme.yml&title=${encodeURIComponent('[GAME COLLECTION]: ')}${encodeURIComponent(title)}&databause_url=${encodeURIComponent(database_link_src)}`
                 } else if (type === "movies") {
                     year = themerr_data['release_date'].split("-")[0]
                     poster_src = `https://image.tmdb.org/t/p/w185${themerr_data['poster_path']}`
                     title = themerr_data['title']
                     summary = themerr_data['overview']
                     database_link_src = `https://www.themoviedb.org/movie/${themerr_data['id']}`
-                    edit_link = `https://github.com/${org_name}/${themerr_database}/issues/new?assignees=&labels=request-theme&template=theme.yml&title=${encodeURIComponent('[MOVIE]: ')}${encodeURIComponent(title)}&database_url=${encodeURIComponent(database_link_src)}`
+                    edit_link = `https://github.com/${org_name}/ThemerrDB/issues/new?assignees=&labels=request-theme&template=theme.yml&title=${encodeURIComponent('[MOVIE]: ')}${encodeURIComponent(title)}&database_url=${encodeURIComponent(database_link_src)}`
                 } else if (type === "movie_collections") {
                     year = null
                     poster_src = `https://image.tmdb.org/t/p/w185${themerr_data['poster_path']}`
                     title = themerr_data['name']
                     summary = themerr_data['overview']
                     database_link_src = `https://www.themoviedb.org/collection/${themerr_data['id']}`
-                    edit_link = `https://github.com/${org_name}/${themerr_database}/issues/new?assignees=&labels=request-theme&template=theme.yml&title=${encodeURIComponent('[MOVIE COLLECTION]: ')}${encodeURIComponent(title)}&database_url=${encodeURIComponent(database_link_src)}`
+                    edit_link = `https://github.com/${org_name}/ThemerrDB/issues/new?assignees=&labels=request-theme&template=theme.yml&title=${encodeURIComponent('[MOVIE COLLECTION]: ')}${encodeURIComponent(title)}&database_url=${encodeURIComponent(database_link_src)}`
                 }
 
                 let inner_container = document.createElement("div")
