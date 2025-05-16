@@ -1,14 +1,14 @@
 let org_name = "LizardByte"
-let base_url = `https://app.${org_name.toLowerCase()}.dev`
-let themerr_database = "ThemerrDB"
+let base_url = `http://locahost:8000/`
+let themerr_database = "database"
 // for local testing in a JetBrains IDE
 // base_url = `http://localhost:63342/ThemerrDB/`
 // themerr_database = "database"
 
 
 // load external js scripts
-$.getScript('https://app.lizardbyte.dev/js/levenshtein_distance.js')
-$.getScript('https://app.lizardbyte.dev/js/ranking_sorter.js')
+$.getScript('js/levenshtein_distance.js')
+$.getScript('js/ranking_sorter.js')
 
 
 $(document).ready(function(){
