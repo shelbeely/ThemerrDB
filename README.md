@@ -1,11 +1,11 @@
 # ThemerrDB
 
-[![GitHub Workflow Status (update)](https://img.shields.io/github/actions/workflow/status/LizardByte/ThemerrDB/update-pages.yml?branch=master&event=schedule&style=for-the-badge&logo=github&label=build)](https://github.com/LizardByte/ThemerrDB/actions/workflows/update-pages.yml?query=branch%3Amaster+event%3Aschedule)
-[![GitHub last commit (gh-pages)](https://img.shields.io/github/last-commit/LizardByte/ThemerrDB/gh-pages?style=for-the-badge&logo=github-pages&label=last%20deployment)](https://github.com/LizardByte/ThemerrDB/commits/gh-pages)
-[![GitHub last commit (database)](https://img.shields.io/github/last-commit/LizardByte/ThemerrDB/database?style=for-the-badge&logo=amazon-documentdb&logoColor=white&label=database%20updated)](https://github.com/LizardByte/ThemerrDB/commits/database)
-[![Under Review](https://img.shields.io/github/issues/LizardByte/ThemerrDB/request-theme?label=under%20review&style=for-the-badge)](https://github.com/LizardByte/ThemerrDB/issues?q=is%3Aopen+is%3Aissue+label%3Arequest-theme)
-[![GitHub closed issues by-label](https://img.shields.io/github/issues-closed/LizardByte/ThemerrDB/approve-theme?style=for-the-badge&label=Approved&color=green)](https://github.com/LizardByte/ThemerrDB/issues?q=is%3Aissue+is%3Aclosed+label%3Aapprove-theme)
-[![Codecov](https://img.shields.io/codecov/c/gh/LizardByte/ThemerrDB?token=RAWCMC72RT&style=for-the-badge&logo=codecov&label=codecov)](https://app.codecov.io/gh/LizardByte/ThemerrDB)
+[![GitHub Workflow Status (update)](https://img.shields.io/github/actions/workflow/status/Shelbeely/ThemerrDB/update-pages.yml?branch=master&event=schedule&style=for-the-badge&logo=github&label=build)](https://github.com/LizardByte/ThemerrDB/actions/workflows/update-pages.yml?query=branch%3Amaster+event%3Aschedule)
+[![GitHub last commit (gh-pages)](https://img.shields.io/github/last-commit/Shelbeely/ThemerrDB/gh-pages?style=for-the-badge&logo=github-pages&label=last%20deployment)](https://github.com/LizardByte/ThemerrDB/commits/gh-pages)
+[![GitHub last commit (database)](https://img.shields.io/github/last-commit/Shelbeely/ThemerrDB/database?style=for-the-badge&logo=amazon-documentdb&logoColor=white&label=database%20updated)](https://github.com/LizardByte/ThemerrDB/commits/database)
+[![Under Review](https://img.shields.io/github/issues/Shelbeely/ThemerrDB/request-theme?label=under%20review&style=for-the-badge)](https://github.com/Shelbeely/ThemerrDB/issues?q=is%3Aopen+is%3Aissue+label%3Arequest-theme)
+[![GitHub closed issues by-label](https://img.shields.io/github/issues-closed/Shelbeely/ThemerrDB/approve-theme?style=for-the-badge&label=Approved&color=green)](https://github.com/Shelbeely/ThemerrDB/issues?q=is%3Aissue+is%3Aclosed+label%3Aapprove-theme)
+[![Codecov](https://img.shields.io/codecov/c/gh/Shelbeely/ThemerrDB?token=RAWCMC72RT&style=for-the-badge&logo=codecov&label=codecov)](https://app.codecov.io/gh/Shelbeely/ThemerrDB)
 
 ThemerrDB is a database for movie and video game theme songs.
 
@@ -14,7 +14,7 @@ The database is created using codeless contributions.
 You can view the entire database at [ThemerrDB](https://app.lizardbyte.dev/ThemerrDB).
 
 ## Database Growth
-[![TheMovieDB Movies](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapp.lizardbyte.dev%2FThemerrDB%2Fmovies%2Fpages.json&query=count&style=for-the-badge&label=TheMovieDB%20Movies&logo=the-movie-database&logoColor=ffffff&color=01B4E4&labelColor=01B4E4)](#movies)
+[![TheMovieDB Movies](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fshelbeely.github.io%2FThemerrDB%2Fmovies%2Fpages.json&query=count&style=for-the-badge&label=TheMovieDB%20Movies&logo=the-movie-database&logoColor=ffffff&color=01B4E4&labelColor=01B4E4)](#movies)
 [![IMDB Movies](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapp.lizardbyte.dev%2FThemerrDB%2Fmovies%2Fpages.json&query=imdb_count&style=for-the-badge&label=IMDB%20Movies&logo=imdb&logoColor=000000&color=F5C518&labelColor=F5C518)](#movies)
 [![Movie Collections](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapp.lizardbyte.dev%2FThemerrDB%2Fmovie_collections%2Fpages.json&query=count&style=for-the-badge&label=Movie%20Collections&logo=the-movie-database&logoColor=ffffff&color=01B4E4&labelColor=01B4E4)](#movie-collections)
 [![TV Shows](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapp.lizardbyte.dev%2FThemerrDB%2Ftv_shows%2Fpages.json&query=count&style=for-the-badge&label=TV%20Shows&logo=the-movie-database&logoColor=ffffff&color=01B4E4&labelColor=01B4E4)](#tv-shows)
